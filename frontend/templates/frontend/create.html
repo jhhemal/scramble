@@ -1,0 +1,25 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scramble Game | Create Word</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center text-success">Welcome to Scramble Words</h1>
+        <h2 class="text-center text-secondary">Add Words</h2>
+        
+        <form action="" method="post" class="w-75 mx-auto">
+            {% csrf_token %}
+            <a href="{% url 'list-word' %}" class="btn btn-warning">View Words</a>
+            {{ form.word|as_crispy_field }}
+            <br>
+            <button type="submit" class="btn btn-success">Add Words</button>
+
+        </form>
+    </div>
+</body>
+</html>
