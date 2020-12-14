@@ -1,4 +1,4 @@
-const urls = "http://127.0.0.1:8000/api/word-list/";
+const urls = "https://scword.herokuapp.com/api/word-list/";
 
 const Get = (yourUrl) =>{
     var Httpreq = new XMLHttpRequest(); // a new request
